@@ -14,4 +14,9 @@ public class Constants {
     public static String GET_DONATIONS_POSTS="GetNgoDoantionsPosts";
     public static String GET_VOLUNTEERS_POSTS="GetNgoVolunteersPosts";
 
+
+    public static void test(){
+
+    }
+
 }
