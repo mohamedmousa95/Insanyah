@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <!--<style name="IndeterminateProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">-->
+        <!--<item name="android:indeterminateDrawable">@anim/progress_bar_indeterminate</item>-->
+    <!--</style>-->
+
+    <style name="CustomProgressBarHorizontal" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
+        <!--<item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal</item>-->
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">50dip</item>
+
+        <!--<item name="android:height">50dp</item>-->
+
+    </style>
+
+    <!--<style name="myProgressBarStyle" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">-->
+     <!--<item name="android:height">50dp</item>-->
+    <!--</style>-->
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+        <!--<item name="toolbarStyle">@style/myToolbarStyle</item>-->
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+
+
+</resources>

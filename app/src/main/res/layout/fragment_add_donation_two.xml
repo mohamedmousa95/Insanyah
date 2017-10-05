@@ -1,0 +1,773 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.insanyah.ui.fragments.AddDonationTwoFragment">
+
+    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="@string/hello_blank_fragment" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_view_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/donation_methods"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/layout_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/text_view_method">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/online_donation"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickOnline"
+                    android:src="@drawable/choice2" />
+
+                <ImageView
+                    android:id="@+id/online_black_border"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/black_border"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/online_donation"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/online_donation" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/in_kind_donation"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickInKind"
+                    android:src="@drawable/choice3" />
+
+                <ImageView
+                    android:id="@+id/in_kind_black_border"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/black_border"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/in_kind_donation"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/in_kind_donation" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/rep_donation"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="40dp"
+                    android:onClick="onClickRep"
+                    android:src="@drawable/choice1" />
+
+                <ImageView
+                    android:id="@+id/rep_black_border"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/black_border"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rep_donation"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/representative_donation" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/green_circle"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickSMS"
+                    android:src="@drawable/green_circle" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickSMS"
+                    android:src="@drawable/sms" />
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/sms_black_border"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginTop="30dp"-->
+                    <!--android:src="@drawable/black_border"-->
+                    <!--android:visibility="invisible"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/green_circle"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sms" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_rep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_choose"
+            android:visibility="invisible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/city"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_city_rep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="35dp"></Spinner>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/neighborhood"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_neigbhorhood_rep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="35dp"></Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:shadowColor="@color/colorPrimary"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHighlight="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textColorLink="@color/colorPrimary"
+                            android:layout_marginStart="10dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:text="@string/donation_date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp"
+                            android:layout_marginEnd="-40dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <DatePicker
+                                android:id="@+id/dp_datepicker_rep"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-45dp"
+                                android:layout_marginEnd="-30dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:calendarViewShown="false"
+                                android:datePickerMode="spinner"
+                                android:headerBackground="@color/colorPrimary"
+                                android:scaleX="0.5"
+                                android:scaleY="0.5" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delivery_time"
+                            android:textColor="@color/colorPrimary" />
+
+                        <Spinner
+                            android:id="@+id/spinner_col_time_rep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"></Spinner>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/amount"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <Button
+                            android:id="@+id/button_rep_fifty"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/button_border"
+                            android:text="@string/fifty"
+                            android:textColor="@color/colorPrimary"
+                            android:onClick="onClickAmount"/>
+
+                        <Button
+                            android:id="@+id/button_rep_hundred"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/button_border"
+                            android:text="@string/hundred"
+                            android:textColor="@color/colorPrimary"
+                            android:onClick="onClickAmount"/>
+
+                        <Button
+                            android:id="@+id/button_rep_two_hundred"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/button_border"
+                            android:text="@string/two_hundred"
+                            android:textColor="@color/colorPrimary"
+                            android:onClick="onClickAmount"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/or"
+                        android:textColor="@color/colorPrimary" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/type_amount"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+
+                        <EditText
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:inputType="number"
+                            android:background="@drawable/button_border"
+                            android:textColor="@color/colorPrimary"
+                            android:paddingStart="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/currency"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+
+                        <Spinner
+                            android:id="@+id/spinner_currency_rep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"></Spinner>
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="50dp"
+                        android:onClick="confirm"
+                        android:text="@string/confirm"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary"
+                        />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_in_kind"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_choose"
+            android:visibility="invisible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/city"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+
+                        <Spinner
+                            android:id="@+id/spinner_city_kind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="15dp"></Spinner>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/neighborhood"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <!--<fragment-->
+                        <!--android:id="@+id/editTextNeighborhoodKind"-->
+                        <!--android:name="com.google.android.gms.location.places.com.example.android.insanyah.ui.PlaceAutocompleteFragment"-->
+                        <!--android:layout_width="230dp"-->
+                        <!--android:layout_height="wrap_content"></fragment>-->
+
+                        <Spinner
+                            android:id="@+id/spinner_neigbhorhood_kind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="15dp"></Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:shadowColor="@color/colorPrimary"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHighlight="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textColorLink="@color/colorPrimary"
+                            android:layout_marginStart="10dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:text="@string/donation_date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp"
+                            android:layout_marginEnd="-40dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <DatePicker
+                                android:id="@+id/dp_datepicker_inkind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-45dp"
+                                android:layout_marginEnd="-30dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:calendarViewShown="false"
+                                android:datePickerMode="spinner"
+                                android:headerBackground="@color/colorPrimary"
+                                android:scaleX="0.5"
+                                android:scaleY="0.5" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delivery_time"
+                            android:textColor="@color/colorPrimary" />
+
+                        <Spinner
+                            android:id="@+id/spinner_col_time_kind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"></Spinner>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/description"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimary" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="50dp"
+                        android:onClick="confirm"
+                        android:text="@string/confirm"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_online"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_choose"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/amount"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp" />
+
+
+
+                <Button
+                    android:id="@+id/button_online_fifty"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_border"
+                    android:text="@string/fifty"
+                    android:textColor="@color/colorPrimary"
+                    android:onClick="onClickAmount"/>
+
+                <Button
+                    android:id="@+id/button_online_hundred"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_border"
+                    android:text="@string/hundred"
+                    android:textColor="@color/colorPrimary"
+                    android:onClick="onClickAmount"/>
+
+                <Button
+                    android:id="@+id/button_online_two_hundred"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_border"
+                    android:text="@string/two_hundred"
+                    android:textColor="@color/colorPrimary"
+                    android:onClick="onClickAmount"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/or"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginStart="30dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/type_amount"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp" />
+
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:background="@drawable/button_border"
+                    android:paddingStart="5dp"
+                    android:textColor="@color/colorPrimary"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/currency"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_currency_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"></Spinner>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="20dp"
+                android:onClick="stageThree"
+                android:text="@string/next_step"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorPrimary"/>
+
+            <!--<Button-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginStart="100dp"-->
+                <!--android:onClick="stageThree"-->
+                <!--android:text="@string/next_step"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:background="@color/colorPrimary"/>-->
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.insanyah.ui.fragments.AddDonationOneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forr"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_for"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"></Spinner>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/how_frequently"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_frequently"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginStart="-20dp"></Spinner>
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="120dp"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginTop="90dp"
+                    android:onClick="stageTwo"
+                    android:text="@string/next_step"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorPrimary"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</FrameLayout>
